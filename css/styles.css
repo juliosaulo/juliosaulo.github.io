@@ -65,6 +65,7 @@ a:hover{ text-decoration: underline; text-underline-offset: 3px; }
 }
 
 .nav{
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -769,9 +770,33 @@ textarea:focus{
     width: min(100% - 28px, var(--container));
   }
 
-  .nav-links{ display: none; }
-  .nav-toggle{ display: inline-flex; }
+  .nav-toggle{
+    display: inline-flex;
+  }
 
+  .nav-links{
+    display: none;
+  }
+
+  .nav-links.is-open{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    position: absolute;
+    right: 0;
+    top: 52px;
+    z-index: 80;
+
+    min-width: 180px;
+    padding: 14px;
+
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,.12);
+    background: rgba(18,24,38,.96);
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  }
   .hero{
     padding-top: 38px;
   }
