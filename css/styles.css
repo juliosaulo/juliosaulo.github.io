@@ -245,9 +245,27 @@ h1{
   line-height: 1.55;
 }
 
-/* Mantém a setinha oculta caso o bloco ainda exista no HTML */
 .hero-scroll{
-  display: none;
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.scroll-hint{
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  background: rgba(18,24,38,.35);
+}
+
+.scroll-hint:hover{
+  color: var(--text);
+  text-decoration: none;
 }
 
 /* Sections */
@@ -256,7 +274,7 @@ h1{
 }
 
 .hero + .section{
-  padding-top: 26px;
+  padding-top: 42px;
 }
 
 .section.alt{
@@ -272,27 +290,21 @@ h1{
 
 .section-head--with-photo{
   display: grid;
-  grid-template-columns: 88px minmax(0, 1fr);
-  gap: 20px;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 22px;
   align-items: center;
   max-width: 920px;
 }
 
 .section-photo{
-  width: 88px;
-  height: 88px;
-  max-width: 88px;
-  max-height: 88px;
-  flex: 0 0 88px;
+  width: 96px;
+  height: 96px;
 }
 
 .section-photo img{
-  display: block;
-  width: 88px;
-  height: 88px;
-  max-width: 88px;
-  max-height: 88px;
-  border-radius: 18px;
+  width: 96px;
+  height: 96px;
+  border-radius: 20px;
   object-fit: cover;
   opacity: .94;
   border: 1px solid rgba(255,255,255,.10);
@@ -826,30 +838,20 @@ textarea:focus{
     text-align: center;
   }
 
-  .hero + .section{
-    padding-top: 24px;
-  }
-
   .section-head--with-photo{
-    grid-template-columns: 68px minmax(0, 1fr);
+    grid-template-columns: 76px minmax(0, 1fr);
     gap: 14px;
     align-items: center;
   }
 
-  .section-photo{
-    width: 68px;
-    height: 68px;
-    max-width: 68px;
-    max-height: 68px;
-    flex: 0 0 68px;
+  .section-photo,
+  .section-photo img{
+    width: 76px;
+    height: 76px;
   }
 
   .section-photo img{
-    width: 68px;
-    height: 68px;
-    max-width: 68px;
-    max-height: 68px;
-    border-radius: 16px;
+    border-radius: 17px;
   }
 
   .card,
@@ -861,6 +863,10 @@ textarea:focus{
 
   .section{
     padding: 42px 0;
+  }
+
+  .hero + .section{
+    padding-top: 34px;
   }
 
   .section-head{
@@ -900,19 +906,9 @@ textarea:focus{
     justify-items: start;
   }
 
-  .section-photo{
-    width: 66px;
-    height: 66px;
-    max-width: 66px;
-    max-height: 66px;
-    flex: 0 0 66px;
-  }
-
+  .section-photo,
   .section-photo img{
-    width: 66px;
-    height: 66px;
-    max-width: 66px;
-    max-height: 66px;
-    border-radius: 15px;
+    width: 72px;
+    height: 72px;
   }
 }
